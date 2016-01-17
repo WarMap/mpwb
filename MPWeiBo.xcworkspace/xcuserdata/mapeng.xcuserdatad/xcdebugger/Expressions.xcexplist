@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[MPTittleButton layoutSubviews]:MPTittleButton.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.titleLabel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__34-[MPMeViewController requestTest:]_block_invoke_2:MPMeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "location">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

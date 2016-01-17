@@ -14,11 +14,14 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - YYWebImage (0.9.12)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
+  - YYWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  YYWebImage: b4e9a24ea43fbdb3e8eb6a3f43b2186ec1c74675
 
 COCOAPODS: 0.39.0

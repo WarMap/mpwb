@@ -3,7 +3,7 @@ use_frameworks!
 
 #target 'MyApp' do
 pod 'AFNetworking', '~> 3.0.4'
-
+pod "YYWebImage"
 #end
 
 
