@@ -76,15 +76,6 @@ const int navHeight = 64;
     self.flowingMenuTransitionManager.delegate = self;
 }
 
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"PresentSegueName"]) {
-//        UIViewController *vc = segue.destinationViewController;
-//        vc.transitioningDelegate = self.flowingMenuTransitionManager;
-//        [self.flowingMenuTransitionManager setInteractiveDismissView:vc.view];
-//        self.popVc = vc;
-//    }
-//}
 - (void)flowingMenuNeedsPresentMenu:(FlowingMenuTransitionManager *)flowingMenu {
     self.popVc  = [[MPChoiceViewController  alloc] init];
     self.popVc .transitioningDelegate = self.flowingMenuTransitionManager;
