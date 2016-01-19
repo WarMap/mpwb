@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlowingMenuDelegate.h"
 
-@interface MPHomeViewController : UITableViewController
+@interface MPHomeViewController : UITableViewController<FlowingMenuDelegate>
+
+- (void)refresh;
 
 @end

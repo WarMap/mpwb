@@ -75,3 +75,11 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 #define MPKeyWindow [UIApplication sharedApplication].keyWindow
+
+/*******StatusCell ******/
+#define MPCellMargin 10
+#define MPNameFont [UIFont systemFontOfSize:15]
+#define MPTimeFont [UIFont systemFontOfSize:12]
+#define MPSourceFont [UIFont systemFontOfSize:12]
+#define MPTextFont [UIFont systemFontOfSize:18]
+#define MPColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]

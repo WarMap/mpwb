@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MPChoiceViewController : UITableViewController
+@interface MPChoiceViewController : UIViewController
 
 @end

@@ -10,8 +10,49 @@
 #import "Macro.h"
 #import "NSString+Size.h"
 #import "UIColor+HEX.h"
+#import <objc/runtime.h>
 
 @implementation UIViewController (Utils)
+
+- (MBProgressHUD *)hud
+{
+    return objc_getAssociatedObject(self, _cmd) ;
+}
+
+- (void)setHud:(MBProgressHUD *)hud
+{
+    objc_setAssociatedObject(self, @selector(hud), hud, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (void)showHud:(NSString *)text{
+    if (!self.hud) {
+        self.hud = [[MBProgressHUD alloc]initWithView:self.view];
+        self.hud.opacity = 0.4;
+        self.hud.minSize = CGSizeMake(120, 120);
+        [self.view addSubview:self.hud];
+    }
+    [self.view bringSubviewToFront:self.hud];
+    self.hud.labelText = text;
+    [self.hud show:YES];
+}
+
+- (void)showOnlyText:(NSString *)text dismiss:(BOOL)dismiss {
+    [self showHud:text];
+    
+    if (dismiss) {
+        double delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void) { [self dismiss]; });
+    }
+}
+
+- (void)dismiss {
+    self.hud.alpha = 0.f;
+    self.hud.mode = MBProgressHUDModeIndeterminate;
+    self.hud.labelText = @"";
+    self.hud.detailsLabelText = @"";
+}
+
 
 - (void)setCustomTitle:(NSString *)title {
     self.navigationItem.title = @"";
